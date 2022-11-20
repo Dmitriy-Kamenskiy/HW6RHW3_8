@@ -13,7 +13,7 @@ public class PersonTest {
 
    @Test
     public void testPersonObject() {
-        Assertions.assertSame(person,person.name);
+        Assertions.assertNotEquals("Fred", person.name);
    }
    @Test
     public void testUsedReturn() {
