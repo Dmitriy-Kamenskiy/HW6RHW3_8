@@ -3,6 +3,8 @@ package ru.netology;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 public class PersonTest {
     Person person = new Person("Fred", "Morgan",1);
     @Test
@@ -12,8 +14,10 @@ public class PersonTest {
     }
 
    @Test
-    public void testPersonObject() {
-        Assertions.assertNotEquals("Fred", person.name);
+    public void testGenerateList() {
+       List<Person> personList = Main.generateClients();
+       personList.add(person);
+       Assertions.assertEquals(6, personList.size());
    }
    @Test
     public void testUsedReturn() {
